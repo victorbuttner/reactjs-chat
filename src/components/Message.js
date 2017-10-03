@@ -9,13 +9,13 @@ class Message extends React.Component {
     const fromMe = this.props.fromMe ? 'from-me' : '';
 
     return (
-      <div className={`message ${fromMe}`}>
-        <div className='username'>
+      <div className={`message msg_bot ${fromMe}`}>
+        <p className='username'>
           { this.props.username }
-        </div>
-        <div className='message-body'>
+        </p>
+        <p className='message-body'>
           { this.props.message }
-        </div>
+        </p>
       </div>
     );
   }

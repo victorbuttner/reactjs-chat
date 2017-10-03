@@ -31,8 +31,9 @@ class ChatInput extends React.Component {
         <input type="text"
           onChange={this.textChangeHandler}
           value={this.state.chatInput}
-          placeholder="Digite sua mensagem..."
+          placeholder="Digite"
           required />
+          <button type="submit" className="button_default_send_light">Enviar</button>
       </form>
     );
   }

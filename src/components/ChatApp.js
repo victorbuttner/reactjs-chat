@@ -7,6 +7,7 @@ import config from '../config';
 import Messages from './Messages';
 import ChatInput from './ChatInput';
 
+
 class ChatApp extends React.Component {
   socket = {};
   constructor(props) {
@@ -46,10 +47,21 @@ class ChatApp extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <h3>React Chat App</h3>
-        <Messages messages={this.state.messages} />
-        <ChatInput onSend={this.sendHandler} />
+      <div className="chatbot chatbot-mobile show-mobile">
+          <div className="header-chatbot show-mobile">
+              <a href="#" className="voltar-chatbox">
+                  <i className="fa fa-arrow-left" aria-hidden="true"></i>
+              </a>
+              <p><strong>Chatbot</strong> <span className="logo_chatbot_mobile">conversa.globo</span></p>
+          </div>
+          <div className="content_chatbot">
+              <div className="content_bot">
+                <Messages messages={this.state.messages} />
+              </div>
+              <div className="content_send_bot">
+                  <ChatInput onSend={this.sendHandler} />
+              </div>
+          </div>
       </div>
     );
   }
